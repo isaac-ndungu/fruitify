@@ -1,85 +1,174 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Fruitify - Home</title>
-    <script src="https://cdn.tailwindcss.com"> </script>
+    <script src="https://cdn.tailwindcss.com"></script>
 </head>
+
 <body>
     <header>
-        <nav>
-
+        <nav class="fixed top-0 left-0 w-full z-50 bg-white/90 backdrop-blur-md border-b border-stone-100">
+            <div class="max-w-6xl mx-auto px-6">
+                <div class="flex justify-between items-center h-20">
+                    <div class="text-2xl font-black text-green-600 tracking-tighter">
+                        FRUITIFY
+                        <span class="text-orange-500">.</span>
+                    </div>
+                    <ul class="hidden md:flex items-center gap-8 font-bold text-stone-600">
+                        <li><a href="index.html" class="text-green-600">Home</a></li>
+                        <li><a href="/shop.html" class="hover:text-green-600">Shop</a></li>
+                        <li><a href="farmers.html" class="hover:text-green-600">Our Farmers</a></li>
+                        <li>
+                            <a href="#"
+                                class="flex items-center gap-2 text-white bg-stone-900 py-2.5 rounded-xl hover:bg-green-600 transition-colors px-4">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
+                                    stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z" />
+                                </svg>
+                                <span>Cart (0)</span>
+                            </a>
+                        </li>
+                    </ul>
+                    <label for="mobile-menu" class="md:hidden cursor-pointer">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-stone-900" fill="none"
+                            viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M4 6h16M4 12h16m-7 6h7" />
+                        </svg>
+                    </label>
+                </div>
+            </div>
+            <input type="checkbox" id="mobile-menu" class="peer hidden">
+            <div
+                class="max-h-0 overflow-hidden peer-checked:max-h-64 transition-all duration-300 md:hidden bg-white border-t border-stone-100">
+                <ul class="flex flex-col gap-4 p-6 font-bold text-stone-600">
+                    <li><a href="index.html" class="text-green-600">Home</a></li>
+                    <li><a href="/shop.html">Shop</a></li>
+                    <li><a href="farmers.html">Our Farmers</a></li>
+                </ul>
+            </div>
         </nav>
     </header>
 
-    <main class="px-16">
-        <section class="py-16 px-16 bg-white">
+    <main class="pt-20">
+
+        <section class="relative bg-stone-50 py-16 lg:py-24 overflow-hidden">
+            <div class="max-w-6xl mx-auto px-6 grid lg:grid-cols-2 gap-12 items-center">
+                <div class="z-10 text-center lg:text-left">
+                    <span
+                        class="inline-block px-4 py-1.5 mb-6 text-xs font-bold tracking-widest text-orange-600 uppercase bg-orange-100 rounded-full">Organic
+                        & Fresh</span>
+                    <h1 class="text-5xl lg:text-7xl font-black text-stone-900 leading-[1.1] mb-6">
+                        Nature's Candy <br> Delivered <span class="text-green-600">Fresh.</span>
+                    </h1>
+                    <p class="text-lg text-stone-600 mb-8 max-w-lg mx-auto lg:mx-0">
+                        Skip the grocery lines. Get seasonal fruits from local Kenyan farms delivered to your doorstep
+                        within 24 hours.
+                    </p>
+                    <div class="flex flex-wrap justify-center lg:justify-start gap-4">
+                        <a href="/shop.html"
+                            class="px-8 py-4 bg-green-600 text-white font-bold rounded-2xl shadow-xl shadow-green-100 hover:bg-green-700 transition-all hover:-translate-y-1">Shop
+                            Harvest</a>
+                        <a href="#"
+                            class="px-8 py-4 bg-white text-stone-900 font-bold rounded-2xl border border-stone-200 hover:bg-stone-50 transition-all">Learn
+                            More</a>
+                    </div>
+                </div>
+                <div class="relative">
+                    <div class="absolute -top-20 -right-20 w-64 h-64 bg-green-200 rounded-full blur-3xl opacity-40">
+                    </div>
+                    <img src="assets/fruits.png" alt="Fruit bowl"
+                        class="relative z-10 w-full rounded-[3rem] shadow-2xl rotate-2">
+                </div>
+            </div>
+        </section>
+
+        <section class="py-24 px-16 bg-white">
             <div class="max-w-6xl mx-auto px-6">
                 <div class="flex justify-between align-end mb-12">
                     <div>
                         <h2 class="text-3xl font-bold text-stone-100">Featured Fruits</h2>
-                        <p class="text-stone-500 mt-2">The best of this week's harvest.</p>
+                        <p class="text-stone-500 mt-2">
+                            The best of this week's harvest.
+                        </p>
                     </div>
 
-                    <a href="/shop.html" class="text-green-600 font-bold hover:underline">View All &rarr;</a>
+                    <a href="shop.html" class="text-green-600 font-bold hover:underline">View All &rarr;</a>
                 </div>
 
                 <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10">
                     <div class="group">
                         <div class="relative overflow-hidden rounded-3xl bg-stone-900 aspect-square mb-4">
-                            <img src="assets/orange.png" alt="Orange" class="w-full h-full object-cover">
-                            <span class="absolute top-4  left-4 bg-white/90 backdrop-blur-sm px-3 py-1 rounded-full text-xs font-bold uppercase">Popular</span>
+                            <img src="assets/orange.png" alt="Orange" class="w-full h-full object-cover" />
+                            <span
+                                class="absolute top-4 left-4 bg-white/90 backdrop-blur-sm px-3 py-1 rounded-full text-xs font-bold uppercase">Popular</span>
                         </div>
 
                         <div class="flex justify-between items-start">
                             <div>
-                                <h3 class="text-xl font-bold text-stone-800">Organic Valencia Orange</h3>
+                                <h3 class="text-xl font-bold text-stone-800">
+                                    Organic Valencia Orange
+                                </h3>
                                 <p class="text-stone-500">1kg / Box</p>
                             </div>
                             <p class="text-green-700 text-xl font-black">KSh 600</p>
                         </div>
 
-                        <button class="w-full mt-4 py-3 border-2 border-stone-100 rounded-xl font-bold group-hover:bg-green-600 group-hover:text-white">
+                        <button
+                            class="w-full mt-4 py-3 border-2 border-stone-100 rounded-xl font-bold group-hover:bg-green-600 group-hover:text-white">
                             Quick Add+
                         </button>
                     </div>
 
                     <div class="group">
                         <div class="relative overflow-hidden rounded-3xl bg-stone-900 aspect-square mb-4">
-                            <img src="assets/bananas.png" alt="Bananas" class="w-full h-full object-cover">
-                            <span class="absolute top-4  left-4 bg-white/90 backdrop-blur-sm px-3 py-1 rounded-full text-xs font-bold uppercase">Sale</span>
+                            <img src="assets/bananas.png" alt="Bananas" class="w-full h-full object-cover" />
+                            <span
+                                class="absolute top-4 left-4 bg-white/90 backdrop-blur-sm px-3 py-1 rounded-full text-xs font-bold uppercase">Sale</span>
                         </div>
 
                         <div class="flex justify-between items-start">
                             <div>
-                                <h3 class="text-xl font-bold text-stone-800">Fairtrade Bananas </h3>
+                                <h3 class="text-xl font-bold text-stone-800">
+                                    Fairtrade Bananas
+                                </h3>
                                 <p class="text-stone-500">Bunch of 6</p>
                             </div>
-                            <p class="text-green-700 text-xl font-black ">KSh 300</p>
-                            <p class="text-stone-400 text-sm font-black line-through">KSh 400</p>
+                            <p class="text-green-700 text-xl font-black">KSh 300</p>
+                            <p class="text-stone-400 text-sm font-black line-through">
+                                KSh 400
+                            </p>
                         </div>
 
-                        <button class="w-full mt-4 py-3 border-2 border-stone-100 rounded-xl font-bold group-hover:bg-green-600 group-hover:text-white">
+                        <button
+                            class="w-full mt-4 py-3 border-2 border-stone-100 rounded-xl font-bold group-hover:bg-green-600 group-hover:text-white">
                             Quick Add+
                         </button>
                     </div>
 
                     <div class="group">
                         <div class="relative overflow-hidden rounded-3xl bg-stone-900 aspect-square mb-4">
-                            <img src="assets/strawberries.png" alt="Strawberries" class="w-full h-full object-cover">
-                            <span class="absolute top-4  left-4 bg-white/90 backdrop-blur-sm px-3 py-1 rounded-full text-xs font-bold uppercase">Sale</span>
+                            <img src="assets/strawberries.png" alt="Strawberries" class="w-full h-full object-cover" />
+                            <span
+                                class="absolute top-4 left-4 bg-white/90 backdrop-blur-sm px-3 py-1 rounded-full text-xs font-bold uppercase">Sale</span>
                         </div>
 
                         <div class="flex justify-between items-start">
                             <div>
-                                <h3 class="text-xl font-bold text-stone-800">Fresh Strawberries</h3>
+                                <h3 class="text-xl font-bold text-stone-800">
+                                    Fresh Strawberries
+                                </h3>
                                 <p class="text-stone-500">250g punnet</p>
                             </div>
                             <p class="text-green-700 text-xl font-black">KSh 650</p>
                         </div>
 
-                        <button class="w-full mt-4 py-3 border-2 border-stone-100 rounded-xl font-bold group-hover:bg-green-600 group-hover:text-white">
+                        <button
+                            class="w-full mt-4 py-3 border-2 border-stone-100 rounded-xl font-bold group-hover:bg-green-600 group-hover:text-white">
                             Quick Add+
                         </button>
                     </div>
@@ -87,24 +176,26 @@
             </div>
         </section>
 
-         <section class="py-20 bg-stone-50" >
-            <div class="max-w-4xl mx-auto  px-6 text-center">
+        <section class="py-20 bg-stone-50">
+            <div class="max-w-4xl mx-auto px-6 text-center">
                 <div class="flex justify-center gap-1 text-orange-400">
                     <span>*</span><span>*</span><span>*</span><span>*</span><span>*</span>
                 </div>
                 <h2 class="text-3xl font-black text-stone-900 mb-8 italic leading-relaxed">
-                    "The freshest fruit I've ever had delivered. The Valencia oranges actually smell like a summer morning."
+                    "The freshest fruit I've ever had delivered. The Valencia oranges
+                    actually smell like a summer morning."
                 </h2>
                 <div class="flex items-center justify-center gap-4">
-                    <img src="assets/sarah.jpg" class="w-12 h-12 rounded-full border-2 border-white shadow-md"  alt="User">
+                    <img src="assets/sarah.jpg" class="w-12 h-12 rounded-full border-2 border-white shadow-md"
+                        alt="User" />
                     <div class="text-left">
                         <p class="font-bold text-stone-900 leading-none">Sarah Jenkins</p>
-                        <p class="text-sm text-stone-500 mt-1" >Certified Fruit Lover</p>
+                        <p class="text-sm text-stone-500 mt-1">Certified Fruit Lover</p>
                     </div>
                 </div>
             </div>
         </section>
     </main>
-    
 </body>
+
 </html>
