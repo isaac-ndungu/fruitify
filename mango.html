@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <title>Apple Mango - Ripe | Fruitify</title>
+</head>
+
+<body>
+    <header>
+        <nav class="fixed top-0 left-0 w-full z-50 bg-white/90 backdrop-blur-md border-b border-stone-100">
+            <div class="max-w-6xl mx-auto px-6">
+                <div class="flex justify-between items-center h-20">
+                    <div class="text-2xl font-black text-green-600 tracking-tighter">
+                        FRUITIFY
+                        <span class="text-orange-500">.</span>
+                    </div>
+                    <ul class="hidden md:flex items-center gap-8 font-bold text-stone-600">
+                        <li><a href="index.html" class="hover:text-green-600">Home</a></li>
+                        <li><a href="/shop.html" class="hover:text-green-600 visited:text-green-600">Shop</a></li>
+                        <li><a href="farmers.html" class="hover:text-green-600">Our Farmers</a></li>
+                        <li><a href="contact.html" class="hover:text-green-600">Contact Us</a></li>
+                        <li>
+                            <a href="#"
+                                class="flex items-center gap-2 text-white bg-stone-900 py-2.5 rounded-xl hover:bg-green-600 transition-colors px-4">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
+                                    stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z" />
+                                </svg>
+                                <span>Cart (0)</span>
+                            </a>
+                        </li>
+                    </ul>
+                    <label for="mobile-menu" class="md:hidden cursor-pointer">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-stone-900" fill="none"
+                            viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M4 6h16M4 12h16m-7 6h7" />
+                        </svg>
+                    </label>
+                </div>
+            </div>
+            <input type="checkbox" id="mobile-menu" class="peer hidden">
+            <div
+                class="max-h-0 overflow-hidden peer-checked:max-h-64 transition-all duration-300 md:hidden bg-white border-t border-stone-100">
+                <ul class="flex flex-col gap-4 p-6 font-bold text-stone-600">
+                    <li><a href="index.html" class="hover:text-green-600">Home</a></li>
+                    <li><a href="/shop.html" class="hover:text-green-600 visited:text-green-600">Shop</a></li>
+                    <li><a href="farmers.html" class="hover:text-green-600">Our Farmers</a></li>
+                    <li><a href="contact.html" class="hover:text-green-600">Contact Us</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+
+    <main class="pt-20 bg-stone-50">
+        <section class="max-w-6xl mx-auto">
+            <div class="flex gap-4">
+                <img src="assets/mango.png" alt="Apple Mango - Ripe">
+                <div class="pt-20 px-10">
+                    <h1 class="text-stone-900 text-4xl font-bold tracking-tight">Apple Mango - Ripe</h1>
+
+                    <div class="text-stone-600">
+                        <p>Sweet, juicy Apple Mangoes hand-picked for freshness. Perfect for juicing, snacking, or fruit
+                            salads. Naturally ripened and delicious.
+                        </p>
+                        <p>Enjoy the rich sweetness of Kenyan Apple Mangoes — naturally ripened, aromatic, and hand-picked
+                            for the best quality. These mangoes are perfect for smoothies, snacking, fruit salads, or fresh
+                            juice. Every piece is carefully selected to ensure freshness, firmness, and full flavor.
+                        </p>
+                    </div>
+
+                    <button>Add to Bag</button>
+                    
+                </div>
+            </div>
+
+        </section>
+    </main>
+</body>
+
+</html>
